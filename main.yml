@@ -1,0 +1,9 @@
+- name: installing vrrp
+  hosts: all
+  become: yes
+  become_method: sudo
+
+  tasks:
+    - name: Install vrrp
+      include_role:
+        name: keepalived
